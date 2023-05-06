@@ -13,7 +13,7 @@ x2 = np.linspace(mu - 3*sigma, mu + 3*sigma, 100)
 y1 = binom.pmf(x1, n, p)
 y2 = norm.pdf(x2, mu, sigma)
 
-plt.bar(x1, y1,color ='blue' ,label ='pmf')
+plt.stem(x1, y1,label ='pmf')
 plt.plot(x2, y2,color = 'red', label='pdf')
 
 plt.legend()
