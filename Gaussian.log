@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Homebrew) (preloaded format=pdflatex 2023.3.21)  9 MAY 2023 23:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Homebrew) (preloaded format=pdflatex 2023.3.21)  9 MAY 2023 23:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1436,7 +1436,7 @@ xlive/20230313/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></opt/homebrew
 /Cellar/texlive/20230313/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></op
 t/homebrew/Cellar/texlive/20230313/share/texmf-dist/fonts/type1/urw/times/utmri
 8a.pfb>
-Output written on Gaussian.pdf (1 page, 74337 bytes).
+Output written on Gaussian.pdf (1 page, 74344 bytes).
 PDF statistics:
  70 PDF objects out of 1000 (max. 8388607)
  50 compressed objects within 1 object stream
