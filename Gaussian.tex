@@ -126,8 +126,16 @@ columns=fullflexible
 \\
  \textbf{Solution:}
  \\
- This experiment has a Binomial Distribution with n = 12 and p = 0.1.
- \\Let, E be the event that exactly 9 articles are defective.
+Let $X_i$ be a random variable corresponding to $i^{th}$ article such that
+\begin{align}
+        X_i=  
+        \begin{cases}
+            1 &  \text{if the article is defective} \\
+            0 &  \text{if the article is not defective}
+        \end{cases}
+    \end{align}
+\\$X_1,X_2,...,X_{12}$ is a sequence of independent and identically distributed random variables.This sequence forms a Binomial Distribution with mean $\mu$ and variance $\sigma^2$
+ \\For this Binomial Distribution, n = 12 and p = 0.1.
  \\The mean and standard deviation of the Binomial distribution are
  \begin{align}
     \mu &= np\\
@@ -137,16 +145,26 @@ columns=fullflexible
     \sigma&= \sqrt{12\times0.1\times0.9}\\
     \sigma&= 1.04
     \end{align}
- \\z-score for the event E can be calculated as
+Let $S_n = \sum_{i=1}^{n} X_i$
 \begin{align}
-    z = \frac{x-np}{\sqrt{np(1-p)}}\\
-    z = \frac{9-1.2}{1.04}\\
-    z = 7.5
+      \text{Standardized sample mean} = \frac{\frac{S_n}{n}-\mu}{\frac{\sigma}{\sqrt{n}}} \\
+      = \frac{S_n-\mu{n}}{\sigma{\sqrt{n}}} 
+    \end{align}
+as $n \to \infty$ ,$\frac{S_n -\mu{n}}{\sigma{\sqrt{n}}} \to N(0,1)$
+\\here N(0,1) denotes a standard normal distribution with mean 0 and variance 1.
+ \\Let, E be the event that exactly 9 articles are defective.
+ \\For the event E
+ \begin{align}
+    S_n &= 9 \text{[as exactly 9 articles are defective]}\nonumber\\
+    &\text{Standardized sample mean for the event E is} \nonumber\\
+    z &= \frac{S_n-np}{\sqrt{np(1-p)}}\\
+    z &= \frac{9-1.2}{1.04}\\
+    z &= 7.5
     \end{align}
 From the Standard Normal Distribution table,
-\\The probability of an event having z-score greater than 7.5 is very low and is equal to $4.338751580235112 \times 10^{-13}$
+\\The probability of an event having standardized sample mean value than 7.5 is very low and is equal to $4.338751580235112 \times 10^{-13}$
 \\Therefore, $\pr{E} = 4.338751580235112 \times 10^{-13}$
-\begin{figure}
+\begin{figure}[h]
 \centering
 \includegraphics[width=\columnwidth]{./figs/graph.png}
 \end{figure}
