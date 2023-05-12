@@ -181,7 +181,7 @@ Let $M_{Z_i}$ be Moment Generating Function of $Z_i$.
       &=1-0=1\nonumber\\
       M_{Z_i}''(0)&=E({Z_i}^2)=1
     \end{align}
-Consider $Y \sim N(0,1)$
+Consider $Y \sim N(0,1)$ , Then
 \begin{align}
     M_Y(t)=e^{\frac{t^2}{2}}
     \end{align}
@@ -211,7 +211,7 @@ Let $u=\frac{1}{\sqrt{n}}$
     &=\frac{t}{2}\lim_{u \to 0}\frac{tM_{Z_i}''(tu)}{1} \nonumber\\
     &=\frac{t^2}{2}M_{Z_i}''(0)\nonumber\\
     \text{[From eq(18)]}\nonumber\\
-    M_{\frac{T_n}{\sqrt{n}}}(t)&=\frac{t^2}{2} \\
+    M_{\frac{T_n}{\sqrt{n}}}(t)&=e^{\frac{t^2}{2}} \\
     \text{Therefore}\nonumber\\
     M_{\frac{T_n}{\sqrt{n}}}(t)&=M_Y(t)
     \end{align}
@@ -231,13 +231,13 @@ According to Uniqueness Theorem of Moment Generating Function,
  \\For the event E
  \begin{align}
     S_n &= 9 \text{[as exactly 9 articles are defective]}\nonumber\\
-    &\text{Standardized sample mean for the event E is} \nonumber\\
+    &\text{Z-Score for the event E is} \nonumber\\
     z &= \frac{S_n-np}{\sqrt{np(1-p)}}\\
     z &= \frac{9-1.2}{1.04}\nonumber\\
     z &= 7.5
     \end{align}
 From the Standard Normal Distribution table,
-\\The probability of an event having standardized sample mean value of 7.5 is very low and is equal to $4.338751580235112 \times 10^{-13}$
+\\The probability of an event having z-score value of 7.5 is very low and is equal to $4.338751580235112 \times 10^{-13}$
 \\Therefore, $\pr{E} = 4.338751580235112 \times 10^{-13}$
 \begin{figure}[h]
 \centering
