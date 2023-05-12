@@ -103,7 +103,7 @@ columns=fullflexible
 \vspace{3cm}
 
 \title{
-\textbf{Bonus Question} \\ \large \textbf{AI1110}: Probability and Random Variables 
+\textbf{Assignment Question 2} \\ \large \textbf{AI1110}: Probability and Random Variables 
 
 
 }
@@ -121,7 +121,7 @@ columns=fullflexible
 \renewcommand{\thefigure}{\theenumi}
 \renewcommand{\thetable}{\theenumi}
 
-\textbf{Question:}\\
+\textbf{Question:12.13.5.13}\\
  	It is known that $ 10\% $ of certain articles manufactured are defective.What is the probability that in a random sample space of 12 such articles, 9 are defective?
 \\
  \textbf{Solution:}
@@ -139,30 +139,105 @@ Let $X_i$ be a random variable corresponding to $i^{th}$ article such that
  \\The mean and standard deviation of the Binomial distribution are
  \begin{align}
     \mu &= np\\
-    \mu &= 12\times0.1\\
+    \mu &= 12\times0.1\nonumber\\
     \mu &= 1.2\\
     \sigma&= \sqrt{np(1-p)}\\
-    \sigma&= \sqrt{12\times0.1\times0.9}\\
+    \sigma&= \sqrt{12\times0.1\times0.9}\nonumber\\
     \sigma&= 1.04
     \end{align}
 Let $S_n = \sum_{i=1}^{n} X_i$
 \begin{align}
-      \text{Standardized sample mean} = \frac{\frac{S_n}{n}-\mu}{\frac{\sigma}{\sqrt{n}}} \\
+      \text{Standardized sample mean} = \frac{\frac{S_n}{n}-\mu}{\frac{\sigma}{\sqrt{n}}}\nonumber \\
       = \frac{S_n-\mu{n}}{\sigma{\sqrt{n}}} 
     \end{align}
-as $n \to \infty$ ,$\frac{S_n -\mu{n}}{\sigma{\sqrt{n}}} \to N(0,1)$
+According to Central Limit Theorem
+\\as $n \to \infty$ ,$\frac{S_n -\mu{n}}{\sigma{\sqrt{n}}} \to N(0,1)$
 \\here N(0,1) denotes a standard normal distribution with mean 0 and variance 1.
+\\\\\textbf{Proof of Central Limit Theorem}
+\\Let $X_1,X_2,..,X_n$ be independent and identically distributed Random Variables with mean $\mu$ and variance $\sigma^2$.
+\\Let
+\begin{align}
+    S_n &= \sum_{i=1}^{n} X_i\\
+    Z_i &= \frac{X_i-\mu}{\sigma}\\
+    E(Z_i)&=E(\frac{X_i-\mu}{\sigma})\\
+    &= \frac{1}{\sigma}E(X_i - \mu)\nonumber\\
+    &= \frac{1}{\sigma}(E(X_i)-E(\mu))\nonumber\\
+    &= \frac{1}{\sigma}(\mu -\mu)\nonumber\\
+    E(Z_i)&=0\\
+    Var(Z_i)&=Var(\frac{X_i-\mu}{\sigma})\\
+    &=\frac{1}{\sigma^2}Var(X_i-\mu)\nonumber\\
+    &=\frac{1}{\sigma^2}Var(X_i)\nonumber\\
+    &=\frac{1}{\sigma^2}\sigma^2\nonumber\\
+    Var(Z_i)&=1
+    \end{align}
+Let $M_{Z_i}$ be Moment Generating Function of $Z_i$.
+\begin{align}
+      M_{Z_i}(t)&=E(e^{tZ_i})\\
+      M_{Z_i}(0)&=E(1)=1\\
+      E(Z_i)&=M_{Z_i}'(0)\\
+      M_{Z_i}'(0)&=0 \text{ From eq(10)}\\
+      Var(Z_i)&=E({Z_i}^2)-{E(Z_i)^2}\\
+      E({Z_i}^2)&=Var(Z_i)+E(Z_i)^2\nonumber\\
+      &=1-0=1\nonumber\\
+      M_{Z_i}''(0)&=E({Z_i}^2)=1
+    \end{align}
+Consider $Y \sim N(0,1)$
+\begin{align}
+    M_Y(t)=e^{\frac{t^2}{2}}
+    \end{align}
+Let $T_n=\sum_{i=1}^{n} Z_i$
+\begin{align}
+    M_{\frac{T_n}{\sqrt{n}}}(t)&=E(e^{t\frac{T_n}{\sqrt{n}}})\\
+    &=E(e^{\frac{t}{\sqrt{n}}\sum_{i=1}^{n} Z_i})\nonumber\\
+    &=E(e^{\frac{t}{\sqrt{n}}Z_1}.e^{\frac{t}{\sqrt{n}}Z_2}...e^{\frac{t}{\sqrt{n}} Z_n})\nonumber\\
+    &=E(e^{\frac{t}{\sqrt{n}}Z_1}).E(e^{\frac{t}{\sqrt{n}}Z_2})...E(e^{\frac{t}{\sqrt{n}}Z_n})\nonumber\\
+    &=M_{Z_1}(\frac{t}{\sqrt{n}}).M_{Z_2}(\frac{t}{\sqrt{n}})...M_{Z_n}(\frac{t}{\sqrt{n}})\nonumber\\
+    &=[M_{Z_i}(\frac{t}{\sqrt{n}})]^n
+    \end{align}
+As $n \to \infty $ , $\lim_{n \to \infty} M_{\frac{T_n}{\sqrt{n}}}(t)$ takes the form $1^\infty$
+\\Applying natural logarithm to the eq(21)
+ \begin{align}
+    \ln(M_{\frac{T_n}{\sqrt{n}}}(t))&=n\ln(M_{Z_i}(\frac{t}{\sqrt{n}}))\nonumber\\
+    \lim_{n \to \infty}\ln(M_{\frac{T_n}{\sqrt{n}}}(t))&=\lim_{n \to \infty}n\ln(M_{Z_i}(\frac{t}{\sqrt{n}}))
+    \end{align}
+Let $u=\frac{1}{\sqrt{n}}$
+\\Then as $n \to \infty $ , $u \to 0 $ 
+\\Substituting in eq(22) we get
+\begin{align}
+    \lim_{n \to \infty}\ln(M_{\frac{T_n}{\sqrt{n}}}(t))&=\lim_{u \to 0}\frac{1}{u^2}\ln(M_{Z_i}(tu))\nonumber\\
+    &=\lim_{u \to 0}\frac{1}{2u}\frac{tM_{Z_i}'(tu)}{M_{Z_i}(tu)}\nonumber\\
+    &=\frac{t}{2}\frac{1}{M_{Z_i}(0)}\lim_{u \to 0}\frac{M_{Z_i}'(tu)}{u}\nonumber\\
+    \text{[From eq(16)]}\nonumber\\
+    &=\frac{t}{2}\lim_{u \to 0}\frac{tM_{Z_i}''(tu)}{1} \nonumber\\
+    &=\frac{t^2}{2}M_{Z_i}''(0)\nonumber\\
+    \text{[From eq(18)]}\nonumber\\
+    M_{\frac{T_n}{\sqrt{n}}}(t)&=\frac{t^2}{2} \\
+    \text{Therefore}\nonumber\\
+    M_{\frac{T_n}{\sqrt{n}}}(t)&=M_Y(t)
+    \end{align}
+According to Uniqueness Theorem of Moment Generating Function,
+\\If two random variables have the same MGF then they have the same distribution.
+\\Therefore,
+\\as $n \to \infty$ $\frac{T_n}{\sqrt{n}}$ and Y have the same distribution.
+\\From eq(7) and eq(8)
+ \begin{align}
+    \frac{T_n}{\sqrt{n}}&= \frac{S_n-n\mu}{\sigma{\sqrt{n}}}
+    \end{align}
+\\Therefore
+\\ as $n \to \infty$ ,$\frac{S_n -\mu{n}}{\sigma{\sqrt{n}}} \to N(0,1)$
+\\Hence Proved.
+\\
  \\Let, E be the event that exactly 9 articles are defective.
  \\For the event E
  \begin{align}
     S_n &= 9 \text{[as exactly 9 articles are defective]}\nonumber\\
     &\text{Standardized sample mean for the event E is} \nonumber\\
     z &= \frac{S_n-np}{\sqrt{np(1-p)}}\\
-    z &= \frac{9-1.2}{1.04}\\
+    z &= \frac{9-1.2}{1.04}\nonumber\\
     z &= 7.5
     \end{align}
 From the Standard Normal Distribution table,
-\\The probability of an event having standardized sample mean value greater than 7.5 is very low and is equal to $4.338751580235112 \times 10^{-13}$
+\\The probability of an event having standardized sample mean value of 7.5 is very low and is equal to $4.338751580235112 \times 10^{-13}$
 \\Therefore, $\pr{E} = 4.338751580235112 \times 10^{-13}$
 \begin{figure}[h]
 \centering

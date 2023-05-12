@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Homebrew) (preloaded format=pdflatex 2023.3.21)  9 MAY 2023 23:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Homebrew) (preloaded format=pdflatex 2023.3.21)  12 MAY 2023 22:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1405,28 +1405,37 @@ LaTeX Font Info:    Trying to load font information for TS1+txr on input line 1
 r.fd
 File: ts1txr.fd 2000/12/15 v3.1
 )
-<./figs/graph.png, id=7, 462.528pt x 346.896pt>
+Underfull \hbox (badness 10000) in paragraph at lines 152--159
+
+ []
+
+[1{/opt/homebrew/Cellar/texlive/20230313/share/texmf-dist/fonts/map/pdftex/updm
+ap/pdftex.map}{/opt/homebrew/Cellar/texlive/20230313/share/texmf-dist/fonts/enc
+/dvips/base/8r.enc}
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 225--232
+
+ []
+
+<./figs/graph.png, id=38, 462.528pt x 346.896pt>
 File: ./figs/graph.png Graphic file (type png)
 <use ./figs/graph.png>
-Package pdftex.def Info: ./figs/graph.png  used on input line 169.
+Package pdftex.def Info: ./figs/graph.png  used on input line 244.
 (pdftex.def)             Requested size: 252.0pt x 189.00427pt.
- [1{/opt/homebrew/Cellar/texlive/20230313/share/texmf-dist/fonts/map/pdftex/upd
-map/pdftex.map}{/opt/homebrew/Cellar/texlive/20230313/share/texmf-dist/fonts/en
-c/dvips/base/8r.enc}
-
-
- <./figs/graph.png>] (./Gaussian.aux)
+[2 <./figs/graph.png>] (./Gaussian.aux)
 Package rerunfilecheck Info: File `Gaussian.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 29978 strings out of 476025
- 602930 string characters out of 5780034
- 1876388 words of memory out of 5000000
+ 29996 strings out of 476025
+ 603142 string characters out of 5780034
+ 1895388 words of memory out of 5000000
  49782 multiletter control sequences out of 15000+600000
- 572296 words of font info for 149 fonts, out of 8000000 for 9000
+ 573612 words of font info for 151 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 101i,16n,96p,1176b,436s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 101i,16n,96p,1176b,445s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </opt/homebrew/Cellar/texlive/20230313/share/texmf-dist/fonts/type1/public/tx
 fonts/rtxmi.pfb></opt/homebrew/Cellar/texlive/20230313/share/texmf-dist/fonts/t
 ype1/public/txfonts/rtxr.pfb></opt/homebrew/Cellar/texlive/20230313/share/texmf
@@ -1436,10 +1445,10 @@ xlive/20230313/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></opt/homebrew
 /Cellar/texlive/20230313/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></op
 t/homebrew/Cellar/texlive/20230313/share/texmf-dist/fonts/type1/urw/times/utmri
 8a.pfb>
-Output written on Gaussian.pdf (1 page, 74344 bytes).
+Output written on Gaussian.pdf (2 pages, 84914 bytes).
 PDF statistics:
- 70 PDF objects out of 1000 (max. 8388607)
- 50 compressed objects within 1 object stream
- 14 named destinations out of 1000 (max. 500000)
+ 91 PDF objects out of 1000 (max. 8388607)
+ 70 compressed objects within 1 object stream
+ 30 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
