@@ -1,4 +1,3 @@
-
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
@@ -126,6 +125,8 @@ columns=fullflexible
 \\
  \textbf{Solution:}
  \\
+ \begin{enumerate}[label=(\Roman*), align=left]
+    \item
 Let $X_i$ be a random variable corresponding to $i^{th}$ article such that
 \begin{align}
         X_i=  
@@ -153,7 +154,8 @@ Let $S_n = \sum_{i=1}^{n} X_i$
 According to Central Limit Theorem
 \\as $n \to \infty$ ,$\frac{S_n -\mu{n}}{\sigma{\sqrt{n}}} \to N\brak{0,1}$
 \\here N(0,1) denotes a standard normal distribution with mean 0 and variance 1.
-\\\\\textbf{Proof of Central Limit Theorem}
+\item
+\textbf{Proof of Central Limit Theorem}
 \\Let $X_1,X_2,..,X_n$ be independent and identically distributed Random Variables with mean $\mu$ and variance $\sigma^2$.
 \\Let
 \begin{align}
@@ -226,8 +228,8 @@ According to Uniqueness Theorem of Moment Generating Function,
 \\Therefore
 \\ as $n \to \infty$ ,$\frac{S_n -\mu{n}}{\sigma{\sqrt{n}}} \to N(0,1)$
 \\Hence Proved.
-\\
- \\Let, E be the event that exactly 9 articles are defective.
+\item
+ Let, E be the event that exactly 9 articles are defective.
  \\For the event E
  \begin{align}
     S_n &= 9 \text{[as exactly 9 articles are defective]}\nonumber\\
@@ -243,8 +245,8 @@ From the Standard Normal Distribution table,
 \centering
 \includegraphics[width=\columnwidth]{./figs/graph.png}
 \end{figure}
-\\
-\\\textbf{Comparision of Answers obtained from Binomial Distribution and Gaussian Distribution}
+\item
+\textbf{Comparision of Answers obtained from Binomial Distribution and Gaussian Distribution}
 \\Binomial Distribution converges to Gaussian Distribution when the size of sample space is large.
 \\If the following condition is satisfied then the Binomial distribution converges to Gaussian Distribution
  \begin{align}
@@ -268,4 +270,5 @@ Therefore the above condition is not satisfied and there would be significant di
     N&\geqslant 111.11
     \end{align}
 Therefore the size of Sample Space should be atleast $112$.
+\end{enumerate}
 \end {document}
