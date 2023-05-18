@@ -16,6 +16,8 @@
 \usepackage{tkz-euclide} % loads  TikZ and tkz-base
 \usepackage{listings}
 \usepackage{float}
+\usepackage{hyperref}
+\usepackage{url}
 
 \DeclareMathOperator*{\Res}{Res}
 %\renewcommand{\baselinestretch}{2}
@@ -232,15 +234,43 @@ According to Uniqueness Theorem of Moment Generating Function,
  Let, E be the event that exactly 9 articles are defective.
  \\For the event E
  \begin{align}
-    S_n &= 9 \text{[as exactly 9 articles are defective]}\nonumber\\
-    &\text{Z Score for the event E is} \nonumber\\
-    z &= \frac{S_n-np}{\sqrt{np\brak{1-p}}}\\
-    z &= \frac{9-1.2}{1.04}\nonumber\\
-    z &= 7.5
+    S_n &= 9 \text{[as exactly 9 articles are defective]}\nonumber
     \end{align}
-From the Standard Normal Distribution table,
-\\The probability of an event having z-score value of 7.5 is very low and is equal to $3.186340080674199 \times 10^{-14}$
-\\Therefore, $\pr{E} = 3.186340080674199 \times 10^{-14}$
+Z-score for a Gaussian distribution is given as
+ \begin{align}
+    z=\frac{x-\mu}{\sigma}
+    \end{align}
+where x is the observed value
+We can calculate $\pr{E}$ by using Q-function.
+\\Q-function $Q\brak{x}$is defined as the complement of the Cumulative Distribution Function(CDF) of the standard normal distribution up to the point x.
+Let $z_1$ and $z_2$ are the z-scores for $x_1$ and $x_2$ respectively
+ \begin{align}
+    x_1 &=9.5\nonumber\\
+    x_2 &=8.5\nonumber\\
+    \text{As $S_n$=9}\nonumber\\
+    z_1 &=\frac{x_1-np}{\sqrt{np\brak{1-p}}}\nonumber\\
+    z_1 &= \frac{9.5-1.2}{1.04}\nonumber\\
+    z_1 &= 7.98\\
+    z_2 &=\frac{x_2-np}{\sqrt{np\brak{1-p}}}\nonumber\\
+    z_2 &= \frac{8.5-1.2}{1.04}\nonumber\\
+    z_2 &= 7.02\\
+    \pr{E} &=Q(z_2)-Q(z_1)\\
+    \pr{E} &=Q(7.02)-Q(7.98)
+    \end{align}
+$Q\brak{x}$ can be calculated by using python code.
+\\Click on the below link to find the code to calculate the value of Q-function.
+\\\url{https://github.com/Rishitha745/Bonus_2/blob/main/Codes/Q_func.py}
+\\Based on the output of the above code we get the value of Q-functions as
+\begin{align}
+    Q(7.98)&=7.316664535724922\times 10^{-16}\\
+    Q(7.02)&=1.1093412281591434\times 10^{-12}
+    \end{align}
+From eq(30)
+\begin{align}
+    \pr{E}&=1.1093412281591434\times 10^{-12}\nonumber\\
+    &-7.316664535724922\times 10^{-16}\nonumber\\
+    \pr{E}&=1.108609561705571\times 10^{-12}
+    \end{align}
 \begin{figure}[h]
 \centering
 \includegraphics[width=\columnwidth]{./figs/graph.png}
