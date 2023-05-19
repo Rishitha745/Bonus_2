@@ -63,6 +63,8 @@ columns=fullflexible
 \newcommand{\BEQA}{\begin{eqnarray}}
 \newcommand{\EEQA}{\end{eqnarray}}
 \newcommand{\define}{\stackrel{\triangle}{=}}
+\newcommand{\permcomb}[4][0mu]{{{}^{#3}\mkern#1#2_{#4}}}
+\newcommand{\comb}[1][-1mu]{\permcomb[#1]{C}}
 
 \bibliographystyle{IEEEtran}
 %\bibliographystyle{ieeetr}
@@ -128,8 +130,8 @@ columns=fullflexible
  \textbf{Solution:}
  \\
  \begin{enumerate}[label=(\Roman*), align=left]
-    \item
-Let $X_i$ be a random variable corresponding to $i^{th}$ article such that
+    \item \textbf{Calculation of Probability Using Gaussian Distribution approach}
+\\Let $X_i$ be a random variable corresponding to $i^{th}$ article such that
 \begin{align}
         X_i=  
         \begin{cases}
@@ -156,8 +158,7 @@ Let $S_n = \sum_{i=1}^{n} X_i$
 According to Central Limit Theorem
 \\as $n \to \infty$ ,$\frac{S_n -\mu{n}}{\sigma{\sqrt{n}}} \to N\brak{0,1}$
 \\here N(0,1) denotes a standard normal distribution with mean 0 and variance 1.
-\item
-\textbf{Proof of Central Limit Theorem}
+\item \textbf{Proof of Central Limit Theorem}
 \\Let $X_1,X_2,..,X_n$ be independent and identically distributed Random Variables with mean $\mu$ and variance $\sigma^2$.
 \\Let
 \begin{align}
@@ -178,7 +179,9 @@ Let $M_{Z_i}$ be Moment Generating Function of $Z_i$.
 \begin{align}
       M_{Z_i}\brak{t}&=E\brak{e^{tZ_i}}\\
       M_{Z_i}\brak{0}&=E\brak{1}=1\\
-      E\brak{Z_i}&=M_{Z_i}'\brak{0}\\
+      E\brak{Z_i}&=M_{Z_i}'\brak{0}
+        \end{align}
+\begin{align}
       M_{Z_i}'\brak{0}&=0 \text{ From eq(10)}\\
       Var\brak{Z_i}&=E\brak{{Z_i}^2}-{E\brak{Z_i}^2}\\
       E\brak{{Z_i}^2}&=Var\brak{Z_i}+E\brak{Z_i}^2\nonumber\\
@@ -230,32 +233,41 @@ According to Uniqueness Theorem of Moment Generating Function,
 \\Therefore
 \\ as $n \to \infty$ ,$\frac{S_n -\mu{n}}{\sigma{\sqrt{n}}} \to N(0,1)$
 \\Hence Proved.
-\item
- Let, E be the event that exactly 9 articles are defective.
+\item \textbf{Continuation of the Gaussian Distribution approach}
+ \\Let, E be the event that exactly 9 articles are defective.
  \\For the event E
  \begin{align}
     S_n &= 9 \text{[as exactly 9 articles are defective]}\nonumber
     \end{align}
 Z-score for a Gaussian distribution is given as
  \begin{align}
-    z=\frac{x-\mu}{\sigma}
+    Z=\frac{X-\mu}{\sigma}
     \end{align}
 where x is the observed value
 We can calculate $\pr{E}$ by using Q-function.
 \\Q-function $Q\brak{x}$is defined as the complement of the Cumulative Distribution Function(CDF) of the standard normal distribution up to the point x.
-Let $z_1$ and $z_2$ are the z-scores for $x_1$ and $x_2$ respectively
+Let $Z_1$ and $Z_2$ are the z-scores for $X_1$ and $X_2$ respectively
+\\To calculate the probability of having exactly 9 defective articles, we can calculate the probability that the number of defective articles is greater than 8.5 and subtract the probability that it is greater than 9.5.
+\\Since the Gaussian distribution is continuous, we consider the probability of the number of defective articles falling within the range of 8.5 to 9.5 (inclusive) as the approximation for having exactly 9 defective articles.
  \begin{align}
-    x_1 &=9.5\nonumber\\
-    x_2 &=8.5\nonumber\\
+    X_1 &=9.5\nonumber\\
+    X_2 &=8.5\nonumber\\
     \text{As $S_n$=9}\nonumber\\
-    z_1 &=\frac{x_1-np}{\sqrt{np\brak{1-p}}}\nonumber\\
-    z_1 &= \frac{9.5-1.2}{1.04}\nonumber\\
-    z_1 &= 7.98\\
-    z_2 &=\frac{x_2-np}{\sqrt{np\brak{1-p}}}\nonumber\\
-    z_2 &= \frac{8.5-1.2}{1.04}\nonumber\\
-    z_2 &= 7.02\\
-    \pr{E} &=Q(z_2)-Q(z_1)\\
+    Z_1 &=\frac{x_1-np}{\sqrt{np\brak{1-p}}}\nonumber\\
+    Z_1 &= \frac{9.5-1.2}{1.04}\nonumber\\
+    Z_1 &= 7.98\\
+    Z_2 &=\frac{x_2-np}{\sqrt{np\brak{1-p}}}\nonumber\\
+    Z_2 &= \frac{8.5-1.2}{1.04}\nonumber\\
+    Z_2 &= 7.02\\
+    \pr{E} &=Q(Z_2)-Q(Z_1)\\
     \pr{E} &=Q(7.02)-Q(7.98)
+    \end{align}
+Q-function can be calculated from the error function $\sbrak{erf\brak{Z}}$ , where Z is the Z- score.
+\begin{align}
+    Q\brak{Z}&=1-\text{erf}\brak{Z}\\
+    \text{erf}\brak{Z}&=\frac{2}{\sqrt{\pi}}\int_{0}^{Z} e^{-t^2} \, dt\\
+    \text{Therefore}\\
+    Q\brak{Z}&=1-\frac{2}{\sqrt{\pi}}\int_{0}^{Z} e^{-t^2} \, dt
     \end{align}
 $Q\brak{x}$ can be calculated by using python code.
 \\Use the link below to find the code to calculate the value of Q-function.
@@ -275,8 +287,16 @@ From eq(30)
 \centering
 \includegraphics[width=\columnwidth]{./figs/graph.png}
 \end{figure}
-\item
-\textbf{Comparision of Answers obtained from Binomial Distribution and Gaussian Distribution}
+\item \textbf{Calculation of Probability using Binomial Distribution approach}
+\\If we consider the distribution as a Binomial Distribution then the $\pr{E}$ can be calculated as
+ \begin{align}
+    \pr{E}&=\comb{n}{r}p^r\brak{1-p}^{n-r}\\
+    r&=9\\
+    &\text{As exactly 9 articles are defective}\nonumber\\
+    \pr{E}&=\comb{12}{9}\brak{0.1}^9{0.9}^3\\
+    \pr{E}&=1.6038 \times 10^{-07}
+    \end{align}
+\item \textbf{Comparision of Answers obtained from Binomial Distribution and Gaussian Distribution}
 \\Binomial Distribution converges to Gaussian Distribution when the size of sample space is large.
 \\If the following condition is satisfied then the Binomial distribution converges to Gaussian Distribution
  \begin{align}

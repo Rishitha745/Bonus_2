@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Homebrew) (preloaded format=pdflatex 2023.3.21)  18 MAY 2023 23:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Homebrew) (preloaded format=pdflatex 2023.3.21)  19 MAY 2023 10:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1371,77 +1371,84 @@ Package hyperref Info: Link coloring OFF on input line 48.
 \c@example=\count346
 \c@rem=\count347
 LaTeX Font Info:    Trying to load font information for U+txsya on input line 1
-26.
+28.
 
 (/opt/homebrew/Cellar/texlive/20230313/share/texmf-dist/tex/latex/txfonts/utxsy
 a.fd
 File: utxsya.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for U+txsyb on input line 1
-26.
+28.
 
 (/opt/homebrew/Cellar/texlive/20230313/share/texmf-dist/tex/latex/txfonts/utxsy
 b.fd
 File: utxsyb.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for U+txmia on input line 1
-26.
+28.
 
 (/opt/homebrew/Cellar/texlive/20230313/share/texmf-dist/tex/latex/txfonts/utxmi
 a.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for U+txsyc on input line 1
-26.
+28.
 
 (/opt/homebrew/Cellar/texlive/20230313/share/texmf-dist/tex/latex/txfonts/utxsy
 c.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for TS1+txr on input line 1
-26.
+28.
 
 (/opt/homebrew/Cellar/texlive/20230313/share/texmf-dist/tex/latex/txfonts/ts1tx
 r.fd
 File: ts1txr.fd 2000/12/15 v3.1
 )
-Underfull \hbox (badness 10000) in paragraph at lines 125--130
+Underfull \hbox (badness 10000) in paragraph at lines 127--132
 \OT1/txr/m/n/12 It is known that $10%$ of cer-tain ar-ti-cles
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 125--130
+Underfull \hbox (badness 10000) in paragraph at lines 127--132
 
  []
 
-[1{/opt/homebrew/Cellar/texlive/20230313/share/texmf-dist/fonts/map/pdftex/updm
-ap/pdftex.map}{/opt/homebrew/Cellar/texlive/20230313/share/texmf-dist/fonts/enc
-/dvips/base/8r.enc}
+
+Underfull \vbox (badness 4266) has occurred while \output is active []
+
+ [1{/opt/homebrew/Cellar/texlive/20230313/share/texmf-dist/fonts/map/pdftex/upd
+map/pdftex.map}{/opt/homebrew/Cellar/texlive/20230313/share/texmf-dist/fonts/en
+c/dvips/base/8r.enc}
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 259--264
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2]
+Underfull \hbox (badness 10000) in paragraph at lines 271--276
 []$\OT1/txr/m/n/12 https : / / github . com / Rishitha745 / Bonus[]2 / blob /
  []
 
-[2]
-<./figs/graph.png, id=58, 462.528pt x 346.896pt>
+<./figs/graph.png, id=53, 462.528pt x 346.896pt>
 File: ./figs/graph.png Graphic file (type png)
 <use ./figs/graph.png>
-Package pdftex.def Info: ./figs/graph.png  used on input line 276.
+Package pdftex.def Info: ./figs/graph.png  used on input line 288.
 (pdftex.def)             Requested size: 252.0pt x 189.00427pt.
- [3 <./figs/graph.png>] (./Gaussian.aux)
+[3 <./figs/graph.png>] [4
+
+] (./Gaussian.aux)
 Package rerunfilecheck Info: File `Gaussian.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 30025 strings out of 476025
- 603545 string characters out of 5780034
- 1893388 words of memory out of 5000000
- 49798 multiletter control sequences out of 15000+600000
+ 30039 strings out of 476025
+ 603687 string characters out of 5780034
+ 1889388 words of memory out of 5000000
+ 49802 multiletter control sequences out of 15000+600000
  577264 words of font info for 162 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 101i,16n,96p,1176b,584s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 101i,16n,96p,1176b,591s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </opt/homebrew/Cellar/texlive/20230313/share/texmf-dist/fonts/type1/public/tx
 fonts/rtxmi.pfb></opt/homebrew/Cellar/texlive/20230313/share/texmf-dist/fonts/t
 ype1/public/txfonts/rtxr.pfb></opt/homebrew/Cellar/texlive/20230313/share/texmf
@@ -1452,10 +1459,10 @@ brew/Cellar/texlive/20230313/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb>
 </opt/homebrew/Cellar/texlive/20230313/share/texmf-dist/fonts/type1/urw/times/u
 tmr8a.pfb></opt/homebrew/Cellar/texlive/20230313/share/texmf-dist/fonts/type1/u
 rw/times/utmri8a.pfb>
-Output written on Gaussian.pdf (3 pages, 95092 bytes).
+Output written on Gaussian.pdf (4 pages, 98765 bytes).
 PDF statistics:
- 119 PDF objects out of 1000 (max. 8388607)
- 95 compressed objects within 1 object stream
- 43 named destinations out of 1000 (max. 500000)
+ 134 PDF objects out of 1000 (max. 8388607)
+ 108 compressed objects within 2 object streams
+ 53 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
